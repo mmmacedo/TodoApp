@@ -8,3 +8,4 @@ Todo.updateOptions({ new: true, runValidators: true}); //retorna os valores atua
 * put: update
 * delete: remove
 * */
+module.exports = Todo;
