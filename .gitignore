@@ -1,5 +1,6 @@
 backend/node_modules
 *.log
 backend/package-lock.json
+frontend/package-lock.json
 /.idea
 frontend/node_modules

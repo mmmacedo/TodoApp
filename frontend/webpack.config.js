@@ -2,10 +2,10 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    entry: './src/index.jsx',
+    entry: './src/main/index.jsx',
     output: {
         path: __dirname + '/public',
-        filename: '.app.js'
+        filename: 'app.js'
     },
     devServer: {
         port: 8080,
@@ -16,7 +16,7 @@ module.exports = {
             chunkFilename: "app.css"
         })
     ], resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
         alias: {
             modules: __dirname + '/node_modules'
         }
@@ -46,7 +46,7 @@ module.exports = {
                 test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
                 use: [
                     {
-                        loader: 'file'
+                        loader: 'file-loader'
                     }
                 ]
             }
