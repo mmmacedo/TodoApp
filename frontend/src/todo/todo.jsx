@@ -7,17 +7,25 @@ export default class Todo extends Component {
     constructor(props) {
         super(props);
         this.handleAdd = this.handleAdd.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.state = {description: '', list: []};
     }
 
-    handleAdd() {
-        console.log(this);
+    handleChange(event) {
+        this.setState({...this.state, description: event.target.value});
+    }
+
+    handleAdd(event) {
+        console.log('click do botao');
     }
 
     render() {
         return (
             <div>
                 <PageHeader name='Tarefas' small='Cadastros'/>
-                <TodoForm handleAdd={this.handleAdd}/>
+                <TodoForm description={this.state.description}
+                          handleChange={this.handleChange}
+                          handleAdd={this.handleAdd}/>
                 <TodoList/>
             </div>
         )
