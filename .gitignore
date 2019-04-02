@@ -6,5 +6,9 @@ backend/package-lock.json
 frontend/package-lock.json
 frontend - redux/package-lock.json
 
+backend/.idea
+frontend/.idea
+frontend - redux/.idea
+
 /.idea
 *.log
