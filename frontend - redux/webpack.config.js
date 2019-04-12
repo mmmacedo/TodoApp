@@ -1,8 +1,7 @@
-const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    entry: './src/main/index.jsx',
+    entry: './src/index.jsx',
     output: {
         path: __dirname + '/public',
         filename: 'app.js'
@@ -28,7 +27,7 @@ module.exports = {
             loader: 'babel-loader',
             query: {
                 presets: ['@babel/react'],
-                plugins: ['transform-object-rest-spread']
+                plugins: ['@babel/plugin-proposal-object-rest-spread']
             }
         }, {
             test: /\.css$/,

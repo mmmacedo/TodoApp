@@ -1,31 +1,26 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react'
 
 export default class Grid extends Component {
-    toCssClasses(numbers) { //4 parametros, CEl, Tablets, Médios e Telas maiores
-        const cols = numbers ? numbers.split(' ') : [];
+    toCssClasses(numbers) {
+        const cols = numbers ? numbers.split(' ') : []
+        let classes = ''
 
-        let classes = '';
-
-        if (cols[0]) {
-            classes += `col-xs-${cols[0]}`; //cel
-        }
-        if (cols[1]) {
-            classes += ` col-sm-${cols[1]}`; // small
-        }
-        if (cols[2]) {
-            classes += ` col-md-${cols[2]}`; //medium
-        }
-        if (cols[3]) {
-            classes += ` col-lg-${cols[3]}`; //large
+        if (cols.length == 1) {
+            classes = `col-xs-${cols[0]}` + ` col-sm-${cols[0]}` + ` col-md-${cols[0]}` + ` col-lg-${cols[0]}`
         }
 
-        return classes;
+        if (cols[0]) classes += `col-xs-${cols[0]}`
+        if (cols[1]) classes += ` col-sm-${cols[1]}`
+        if (cols[2]) classes += ` col-md-${cols[2]}`
+        if (cols[3]) classes += ` col-lg-${cols[3]}`
+
+        return classes
     }
 
-    render () {
-        const gridClasse = this.toCssClasses(this.props.cols || 12);
+    render() {
+        const gridClasses = this.toCssClasses(this.props.cols || 12)
         return (
-            <div className={gridClasse}>
+            <div className={gridClasses}>
                 {this.props.children}
             </div>
         )

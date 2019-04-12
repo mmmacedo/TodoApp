@@ -1,0 +1,24 @@
+.btn {
+    margin-right: 0.8rem;
+    border: 1px solid black;
+}
+
+.marked-as-done{
+    text-decoration: line-through;
+    color: #777;
+}
+
+.table-actions {
+    width: 8.5rem;
+}
+
+.todo-form {
+    padding-bottom: 3rem;
+}
+
+.spaced-flex-line {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
