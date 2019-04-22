@@ -11,7 +11,7 @@ class TodoForm extends Component {
         this.keyHandler = this.keyHandler.bind(this)
     }
 
-    componentWillMount() {
+    componentWillMount() { //executa qdo monta o componente
         this.props.search()
     }
 
